@@ -13,7 +13,7 @@ public class OpenApiConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .components(new Components())
-                .info(new Info().title("Contact Application API").description(
-                        "This is a sample Spring Boot RESTful service using springdoc-openapi and OpenAPI 3."));
+                .info(new Info().title("API do Sistema Ponto Eletrônico").description(
+                        "API para registro e controle de ponto eletrônico."));
     }
 }

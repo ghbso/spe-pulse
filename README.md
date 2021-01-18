@@ -55,6 +55,7 @@ Este projeto foi implementado em Java, utilizando o framework Spring Boot v2.4.2
 O código fonte da aplicação encontra-se dentro da pasta **src/main**. 
 O código fonte dos testes de unidade encontra-se dentro da pasta **src/test**. 
 O schema da base de dados (PostgresSQL) encontra-se no arquivo **pulse-spe-schema.sql**, localizado na pasta **database**.
+Os arquivos com *planejamento das atividades realizadas* e *overview da documentação gerada com swagger* estão localizados na pasta **documentos**.
 
  ## Testes de unidade dos requisitos do sistema
 
