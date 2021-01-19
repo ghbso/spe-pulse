@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table
@@ -22,15 +24,21 @@ public class Ponto {
 	private Integer id;
 	
 	@Column(name="data")
+	@NotNull
+	@NotBlank
 	private LocalDate data;
 	
 
 	@Column(name="hora")
+	@NotNull
+	@NotBlank
 	private LocalTime hora;
 	
 	
 	@ManyToOne
 	@JoinColumn(name="cpf")
+	@NotNull
+	@NotBlank
 	private Usuario funcionario;
 
 	public Integer getId() {

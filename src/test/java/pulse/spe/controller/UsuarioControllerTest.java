@@ -144,9 +144,19 @@ class UsuarioControllerTest {
 	}
 
 	@Test
+	void deveUnauthorizedPoisNaoHaUsuarioLogado() throws Exception {
+		
+		this.mockMvc.perform(multipart("/usuario")
+				.file(jsonFile)
+				.file(file))
+		.andExpect(status().isUnauthorized());
+		
+		
+	}
+
+	@Test
 	@WithMockUser(authorities = { "USER" })
 	void deveRetornarForbiddenDevidoNaoPossuirRoleDeADM() throws Exception {
-		
 		
 		this.mockMvc.perform(multipart("/usuario")
 				.file(jsonFile)

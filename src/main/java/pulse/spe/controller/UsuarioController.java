@@ -35,9 +35,9 @@ public class UsuarioController {
 
 	@Operation(summary = "Cadastra um novo usuário", description = "Realiza o cadastro de um novo usuário", tags = { "Usuário" })
 	@ApiResponses(value = {
-			@ApiResponse(responseCode = "200", description = "operação realizada com sucesso"),
-			@ApiResponse(responseCode = "401", description = "acesso não autorizado!"), 
-			@ApiResponse(responseCode = "403", description = "acesso negado!")
+			@ApiResponse(responseCode = "200", description = "Usuário cadastrado!"),
+			@ApiResponse(responseCode = "401", description = "Acesso não autorizado!"), 
+			@ApiResponse(responseCode = "403", description = "Acesso negado!")
 			
 	})
 	@PostMapping(value = "/usuario", consumes = { MediaType.APPLICATION_JSON_VALUE,
@@ -54,8 +54,8 @@ public class UsuarioController {
 
 	@Operation(summary = "Autentica usuário", description = "Realiza autenticação a partir das credenciais do usuário", tags = { "Usuário" })
 	@ApiResponses(value = {
-			@ApiResponse(responseCode = "200", description = "operação realizada com sucesso"), 
-			@ApiResponse(responseCode = "401", description = "credenciais incorretas") 
+			@ApiResponse(responseCode = "200", description = "Login autorizado!"), 
+			@ApiResponse(responseCode = "401", description = "Credenciais incorretas!") 
 			
 	})
 	@PostMapping(value="/login")

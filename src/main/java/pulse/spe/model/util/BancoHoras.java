@@ -1,12 +1,19 @@
 package pulse.spe.model.util;
 
+import javax.validation.constraints.NotBlank;
+
 import org.springframework.stereotype.Component;
 
 @Component
 public class BancoHoras {
 	
+	@NotBlank
 	private Integer horasTrabalhadas=0;
+	
+	@NotBlank
 	private Integer horasNaoTrabalhadas=0;
+	
+	@NotBlank
 	private Integer horasExtrasTrabalhadas=0;
 	
 	public Integer getHorasTrabalhadas() {

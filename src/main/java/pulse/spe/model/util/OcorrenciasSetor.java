@@ -1,8 +1,13 @@
 package pulse.spe.model.util;
 
+import javax.validation.constraints.NotBlank;
+
 public class OcorrenciasSetor {
 	
+	@NotBlank
 	private String setor;
+	
+	@NotBlank
 	private long qntOcorrencias;
 	
 	

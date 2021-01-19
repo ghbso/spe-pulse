@@ -131,7 +131,60 @@ class PontoControllerTest {
 		)
 		.andExpect(status().isForbidden());
 	}
-	
+
+
+	@Test
+	void deveUnauthorizedPoisNaoHaUsuarioLogado() throws Exception {
+		
+		this.mockMvc.perform(post("/frequencia")
+				.param("cpf", "cpf")
+		)
+		.andExpect(status().isUnauthorized());
+
+		this.mockMvc.perform(get("/frequencia")
+				.param("cpf", "cpf")
+				.param("data", "31/01/2020"))
+		.andExpect(status().isUnauthorized());
+
+		this.mockMvc.perform(get("/frequencia/hoje")
+				.param("cpf", "cpf")
+		)
+		.andExpect(status().isUnauthorized());
+
+		this.mockMvc.perform(get("/frequencia/historico")
+				.param("cpf", "cpf")
+				.param("inicio", "01/01/2020")
+				.param("fim", "31/01/2020")
+		)
+		.andExpect(status().isUnauthorized());
+
+		this.mockMvc.perform(get("/frequencia/historico/mes")
+				.param("cpf", "cpf")
+		)
+		.andExpect(status().isUnauthorized());
+		
+		this.mockMvc.perform(get("/frequencia/historico/ocorrencias")
+				.param("cpf", "cpf")
+				.param("inicio", "01/01/2020")
+				.param("fim", "31/01/2020")
+		)
+		.andExpect(status().isUnauthorized());
+
+		this.mockMvc.perform(get("/frequencia/historico/ocorrencias/usuario")
+				.param("cpf", "cpf")
+				.param("inicio", "01/01/2020")
+				.param("fim", "31/01/2020")
+		)
+		.andExpect(status().isUnauthorized());
+		
+		this.mockMvc.perform(get("/frequencia/historico/consolidado")
+				.param("cpf", "cpf")
+				.param("inicio", "01/01/2020")
+				.param("fim", "31/01/2020")
+				.param("diaSemana", "1")
+		)
+		.andExpect(status().isUnauthorized());
+	}
 
 	@Test
 	@WithMockUser(authorities = { "USER" })

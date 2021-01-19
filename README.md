@@ -2,11 +2,11 @@
 
  ## Requisitos do sistema
 1. Login do usuário 
- - O que deve fazer ? Realizar o login com seu usuário e senha, um token JWT deve ser entregue e todas as demais rotas devem ser autenticadas. 
+ - O que deve fazer ? Realizar o login com seu usuário e senha, retornando um token JWT. Todas as demais rotas devem ser autenticadas. 
  - Quais perfis de usuário tem permissão ? Todos
 
 2. Cadastro de usuário
- - O que deve fazer ? Cadastrar um usuário informando: Nome,  Sobrenome, CPF, Email, Senha, Foto, Setor, Perfil
+ - O que deve fazer ? Cadastrar um usuário informando: Nome, Sobrenome, CPF, Email, Senha, Foto, Setor, Perfil
  - Quais perfis de usuário tem permissão ? ADMIN
 
 3. Consulta de batidas de ponto na data informada
@@ -35,8 +35,7 @@
  - Quais perfis de usuário tem permissão ? ADMIN ou USER (neste caso, pode consultar apenas seu ponto)
  
 7. Consulta de ocorrências da empresa
- > O registro de ponto incorreto acarreta numa **ocorrência**, pode ser
-considerado ocorrência no sistema o registro de apenas *um ponto no dia*, porém essa regra pode ser alterada pelo admin para outra quantidade de pontos a escolha dele.
+ > O registro de ponto incorreto acarreta numa **ocorrência**. Pode ser considerada ocorrência no sistema o registro de apenas *um ponto no dia*, porém essa regra pode ser alterada pelo admin para outra quantidade de pontos a escolha dele.
  - O que deve fazer ? Retornar a quantidade de ocorrências que cada um dos usuários cometeu nesse intervalo de tempo. 
  - Quais perfis de usuário tem permissão ? ADMIN 
 

@@ -1,8 +1,13 @@
 package pulse.spe.model.util;
 
+import javax.validation.constraints.NotBlank;
+
 public class CredenciaisUsuario {
 	
+	@NotBlank
 	public String usuario;
+	
+	@NotBlank
 	public String senha;
 	
 	public String getUsuario() {

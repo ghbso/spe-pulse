@@ -1,8 +1,13 @@
 package pulse.spe.model.util;
 
+import javax.validation.constraints.NotBlank;
+
 public class OcorrenciasUsuario {
 	
+	@NotBlank
 	private String cpf;
+	
+	@NotBlank
 	private long qntOcorrencias;
 	
 	
